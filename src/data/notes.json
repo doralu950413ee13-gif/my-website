@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "2024 年末感言",
+    "date": "2024-12-31",
+    "markdownId": "daily-note-2024",
+    "preview": "這一年過得很快，學到了很多 React 的技術..."
+  },
+  {
+    "id": 2,
+    "title": "第一次當家教的心情",
+    "date": "2024-10-15",
+    "markdownId": "first-tutor-experience",
+    "preview": "今天第一次去學生家教課，心裡其實很緊張..."
+  }
+]

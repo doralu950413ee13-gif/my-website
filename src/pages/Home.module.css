@@ -1,0 +1,23 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+  background: white;
+}
+.title {
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-family: serif; /* 仿 Orestis 風格 */
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  letter-spacing: -2px;
+}
+.accent { color: #3b82f6; font-style: italic; }
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.line { width: 60px; height: 4px; background: #1a1a1a; margin-top: 2rem; }

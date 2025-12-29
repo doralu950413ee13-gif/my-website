@@ -1,0 +1,9 @@
+.article { padding: 150px 10%; max-width: 800px; margin: auto; }
+.mainTitle { font-family: serif; font-size: 3.5rem; line-height: 1.1; margin-bottom: 50px; }
+.markdownContent {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333;
+}
+/* 針對 Markdown 內標題的微調 */
+.markdownContent h2 { font-family: serif; margin-top: 40px; font-size: 2rem; }

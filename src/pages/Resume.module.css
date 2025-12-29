@@ -1,0 +1,79 @@
+.articleContainer {
+  padding: 160px 10% 80px;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #999;
+  cursor: pointer;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.backButton:hover {
+  color: #1a1a1a;
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+.title {
+  font-family: serif; /* 關鍵：使用襯線體 */
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.1;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.divider {
+  width: 40px;
+  height: 2px;
+  background-color: #3b82f6;
+}
+
+/* 針對 Markdown 內容的樣式設定 */
+.content {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+}
+
+.content h2 {
+  font-family: serif;
+  font-size: 2rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.content p {
+  margin-bottom: 25px;
+}
+
+.content ul {
+  margin-bottom: 25px;
+  padding-left: 20px;
+}
+
+.content li {
+  margin-bottom: 10px;
+  list-style-type: square;
+}
+
+.content blockquote {
+  border-left: 4px solid #eee;
+  padding-left: 20px;
+  font-style: italic;
+  color: #666;
+  margin: 40px 0;
+}

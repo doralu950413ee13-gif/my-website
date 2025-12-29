@@ -1,0 +1,21 @@
+.wrapper { padding: 120px 10% 60px; max-width: 1400px; }
+.header { margin-bottom: 80px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.category { text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: #999; }
+.pageTitle { font-family: serif; font-size: 3rem; margin-top: 10px; }
+
+.item {
+  display: block;
+  padding: 40px 0;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.item:hover .itemTitle { color: #3b82f6; transform: translateX(10px); }
+.itemTitle {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+}
+.date { font-family: monospace; color: #bbb; font-size: 0.9rem; }
+.description { color: #666; max-width: 600px; line-height: 1.6; }
