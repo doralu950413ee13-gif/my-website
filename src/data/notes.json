@@ -1,16 +1,18 @@
 [
   {
     "id": 1,
-    "title": "2024 年末感言",
-    "date": "2024-12-31",
-    "markdownId": "daily-note-2024",
-    "preview": "這一年過得很快，學到了很多 React 的技術..."
+    "title": "在電機系的那些日子",
+    "date": "DEC 24, 2025",
+    "markdownId": "ee-life",
+    "image": "/images/note1.jpg", 
+    "preview": "從電路板到程式碼，這裡記錄了我對工程與美感的追求..."
   },
   {
     "id": 2,
-    "title": "第一次當家教的心情",
-    "date": "2024-10-15",
-    "markdownId": "first-tutor-experience",
-    "preview": "今天第一次去學生家教課，心裡其實很緊張..."
+    "title": "冬日裡的家教感悟",
+    "date": "NOV 15, 2025",
+    "markdownId": "tutor-blog",
+    "image": "/images/note2.jpg",
+    "preview": "看著學生從困惑到眼神發亮的瞬間，是我教課最大的動力..."
   }
 ]

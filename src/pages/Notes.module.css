@@ -1,0 +1,137 @@
+.wrapper {
+  min-height: 100vh;
+  background-color: #f5f1ea;
+  padding: 140px 10% 80px;
+}
+
+.header {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.label {
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  color: #b08d57;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #1a1a1a;
+  margin-top: 15px;
+}
+
+.blogList {
+  display: flex;
+  flex-direction: column;
+  gap: 100px; /* 增加文章間的間距，讓留白更舒服 */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.postCard {
+  display: grid;
+  grid-template-cols: 1.2fr 1fr; /* 圖片佔比稍大 */
+  gap: 60px;
+  text-decoration: none;
+  align-items: center;
+  color: inherit;
+}
+
+/* 偶數文章圖片在右邊，形成錯落美感 */
+.postCard:nth-child(even) {
+  direction: rtl;
+}
+.postCard:nth-child(even) .postInfo {
+  direction: ltr; /* 讓文字維持左對齊 */
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background-color: #e0dcd5;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.postCard:hover .image {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(26, 26, 26, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.overlay span {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  border: 1px solid white;
+  padding: 10px 20px;
+}
+
+.postCard:hover .overlay {
+  opacity: 1;
+}
+
+.postInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #b08d57;
+  margin-bottom: 15px;
+}
+
+.postTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.previewText {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.more {
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+  align-self: flex-start;
+  padding-bottom: 5px;
+}
+
+/* 手機版排版切換 */
+@media (max-width: 850px) {
+  .postCard, .postCard:nth-child(even) {
+    grid-template-cols: 1fr;
+    direction: ltr;
+    gap: 30px;
+  }
+}

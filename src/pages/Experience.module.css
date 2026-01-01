@@ -1,0 +1,104 @@
+.wrapper {
+  min-height: 100vh;
+  background-color: #f5f1ea;
+  padding: 140px 10% 80px;
+}
+
+.header {
+  margin-bottom: 80px;
+  border-bottom: 1px solid #e0dcd5;
+  padding-bottom: 20px;
+}
+
+.label {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: #b08d57;
+  font-weight: 600;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-top: 10px;
+}
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-cols: 200px 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.timeSection {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.period {
+  font-family: monospace;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+
+.location {
+  font-size: 0.75rem;
+  color: #b08d57;
+  letter-spacing: 2px;
+}
+
+.contentSection {
+  position: relative;
+  padding-left: 40px;
+  border-left: 1px solid #e0dcd5; /* 時間軸的那條垂直線 */
+}
+
+/* 時間軸上的圓點 */
+.dot {
+  position: absolute;
+  left: -5.5px; /* 讓圓點剛好卡在線上 (線寬 1px + 圓點半徑) */
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #b08d57;
+  border-radius: 50%;
+}
+
+.itemTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+/* 響應式：手機版將左右結構改為上下 */
+@media (max-width: 768px) {
+  .timelineItem {
+    grid-template-cols: 1fr;
+    gap: 20px;
+  }
+  .timeSection {
+    text-align: left;
+  }
+  .contentSection {
+    padding-bottom: 40px;
+  }
+}

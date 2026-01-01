@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "period": "2024 - PRESENT",
+    "title": "國立臺灣大學 電機工程學系",
+    "description": "深入研究電路系統、訊號處理與網頁開發技術。參與多項校內專案與學術研究。",
+    "location": "TAIPEI"
+  },
+  {
+    "id": 2,
+    "period": "2023 SUMMER",
+    "title": "電機營 Xplore 總召 / 網頁組長",
+    "description": "負責營隊整體規劃與官方網站開發，帶領 50 人團隊完成為期一週的營隊活動。",
+    "location": "TAIPEI"
+  },
+  {
+    "id": 3,
+    "period": "2021 - 2023",
+    "title": "台北市立第一女子高級中學",
+    "description": "高中時期參與機器人社團，開啟了對硬體開發與程式設計的熱忱。",
+    "location": "TAIPEI"
+  }
+]

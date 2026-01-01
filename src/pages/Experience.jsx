@@ -1,24 +1,33 @@
-import { Link } from 'react-router-dom';
-import projectData from '../data/projects.json'; // 注意路徑多了一個點
+import React from 'react';
+import styles from './Experience.module.css';
+import expData from '../data/experience.json';
 
-const Projects = () => {
+const Experience = () => {
   return (
-    <div className="pt-24 px-6 max-w-6xl mx-auto">
-      <h2 className="text-3xl font-bold mb-8 text-gray-800">專案紀錄</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projectData.map((project) => (
-          <Link 
-            key={project.id} 
-            to={`/projects/${project.markdownId}`} 
-            className="group block bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all"
-          >
-            <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600">{project.title}</h3>
-            <p className="text-gray-600 line-clamp-2">{project.description}</p>
-          </Link>
+    <div className={styles.wrapper}>
+      <header className={styles.header}>
+        <span className={styles.label}>MY JOURNEY</span>
+        <h2 className={styles.title}>經歷與軌跡</h2>
+      </header>
+
+      <div className={styles.timeline}>
+        {expData.map((item) => (
+          <div key={item.id} className={styles.timelineItem}>
+            <div className={styles.timeSection}>
+              <span className={styles.period}>{item.period}</span>
+              <span className={styles.location}>{item.location}</span>
+            </div>
+            
+            <div className={styles.contentSection}>
+              <div className={styles.dot}></div>
+              <h3 className={styles.itemTitle}>{item.title}</h3>
+              <p className={styles.description}>{item.description}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>
   );
 };
 
-export default Projects; // 必須匯出
+export default Experience;
