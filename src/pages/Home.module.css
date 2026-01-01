@@ -44,15 +44,13 @@
 /* 核心：分欄引擎 */
 .contentGrid {
   display: grid;
-  /* 強制分欄比例，並設定寬度 */
-  grid-template-cols: 1.4fr 1fr; 
-  gap: 60px;
+  grid-template-columns: 1.4fr 1fr; /* 👈 這是左右分的關鍵 */
+  gap: 80px;
   align-items: start;
   border-top: 1px solid #e0dcd5;
   padding-top: 60px;
   width: 100%;
 }
-
 .leftCol, .rightCol {
   width: 100%;
   text-align: left;
@@ -160,16 +158,10 @@
 }
 
 /* 響應式：平板與手機改為單欄 */
+/* 確保大螢幕下不會擠在一起 */
 @media (max-width: 1024px) {
   .contentGrid {
     grid-template-cols: 1fr;
-    gap: 50px;
-  }
-  .statsCard {
-    box-shadow: none;
-    padding: 30px;
-  }
-  .quote {
-    font-size: 1.8rem;
+    gap: 40px;
   }
 }

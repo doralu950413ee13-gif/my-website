@@ -1,3 +1,4 @@
+// src/pages/Home.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
@@ -14,16 +15,10 @@ const Home = () => {
           </h1>
         </header>
 
-        {/* 使用 Inline Style 強制開啟 Grid 分欄 */}
-        <div 
-          className={styles.contentGrid} 
-          style={{ 
-            display: 'grid', 
-            gridTemplateColumns: window.innerWidth > 1024 ? '1.4fr 1fr' : '1fr', 
-            gap: '80px' 
-          }}
-        >
-          {/* 左側 60% */}
+        {/* 核心分欄區塊 */}
+        <div className={styles.contentGrid}>
+          
+          {/* 左側 60%：軟性敘事 */}
           <div className={styles.leftCol}>
             <blockquote className={styles.quote}>
               「用邏輯梳理世界，<br/>用善良溫暖人心。」
@@ -46,7 +41,7 @@ const Home = () => {
             </div>
           </div>
 
-          {/* 右側 40% */}
+          {/* 右側 40%：硬性背景 */}
           <div className={styles.rightCol}>
             <div className={styles.statsCard}>
               <h3 className={styles.cardTitle}>PROFESSIONAL PILLARS</h3>
@@ -76,6 +71,7 @@ const Home = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
