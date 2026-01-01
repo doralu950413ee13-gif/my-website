@@ -5,24 +5,79 @@ import styles from './Home.module.css';
 const Home = () => {
   return (
     <div className={styles.wrapper}>
-      <section className={styles.hero}>
-        <span className={styles.greeting}>WELCOME TO MY SPACE</span>
-        <h1 className={styles.mainTitle}>
-          Alumi Lu <br /> 
-          <span className={styles.italicText}>& Her Creative Journey</span>
-        </h1>
-        <div className={styles.description}>
-          <p>電機工程背景的程式開發者，熱衷於將複雜的邏輯轉化為優雅的使用者體驗。</p>
-          <p>在這裡，我分享技術專案、教學心得與日常札記。</p>
+      <div className={styles.container}>
+        <header className={styles.heroHeader}>
+          <span className={styles.label}>EMPATHY, LOGIC & GROWTH</span>
+          <h1 className={styles.mainTitle}>
+            Alumi Lu 
+            <span className={styles.subtitle}>To be Competent, <br/>yet Kind.</span>
+          </h1>
+        </header>
+
+        {/* 使用 Inline Style 強制開啟 Grid 分欄 */}
+        <div 
+          className={styles.contentGrid} 
+          style={{ 
+            display: 'grid', 
+            gridTemplateColumns: window.innerWidth > 1024 ? '1.4fr 1fr' : '1fr', 
+            gap: '80px' 
+          }}
+        >
+          {/* 左側 60% */}
+          <div className={styles.leftCol}>
+            <blockquote className={styles.quote}>
+              「用邏輯梳理世界，<br/>用善良溫暖人心。」
+            </blockquote>
+            
+            <div className={styles.visionBox}>
+              <p className={styles.text}>
+                在電機工程的嚴謹訓練下，我學會如何解決複雜的問題；
+                在與人連結的過程裡，我學會如何傾聽那些未曾被訴說的需求。
+              </p>
+              <p className={styles.text}>
+                我追求卓越，是為了擁有更強大的力量去保護與回饋他人。
+                我期許自己不只是一個優秀的專業者，更是一個能為社會帶來微光的善良存在。
+              </p>
+            </div>
+
+            <div className={styles.actions}>
+              <Link to="/experience" className={styles.primaryBtn}>JOURNEY OF GROWTH</Link>
+              <Link to="/resume" className={styles.secondaryBtn}>TUTORING MISSION</Link>
+            </div>
+          </div>
+
+          {/* 右側 40% */}
+          <div className={styles.rightCol}>
+            <div className={styles.statsCard}>
+              <h3 className={styles.cardTitle}>PROFESSIONAL PILLARS</h3>
+              
+              <div className={styles.statItem}>
+                <span className={styles.statLabel}>EDUCATION</span>
+                <p className={styles.statValue}>國立陽明交通大學 電機工程學系</p>
+                <p className={styles.statSub}>北一女中數理資優班 / 局長獎畢業</p>
+              </div>
+
+              <div className={styles.statItem}>
+                <span className={styles.statLabel}>ACADEMIC & COMPETITION</span>
+                <p className={styles.statValue}>分科測驗數甲滿級分</p>
+                <p className={styles.statSub}>全國數學建模競賽 金牌</p>
+              </div>
+
+              <div className={styles.statItem}>
+                <span className={styles.statLabel}>LEADERSHIP</span>
+                <p className={styles.statValue}>清交北一校友會 創會會長</p>
+                <p className={styles.statSub}>NYCU OpenHouse 企劃副召</p>
+              </div>
+
+              <div className={styles.statItem}>
+                <span className={styles.statLabel}>CROSS-DISCIPLINARY</span>
+                <p className={styles.statValue}>NYCU 抓馬盃 冠軍 & 最佳女主角</p>
+                <p className={styles.statSub}>極短時間掌握表演精髓的學習爆發力</p>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div className={styles.ctaArea}>
-          <Link to="/projects" className={styles.primaryBtn}>VIEW PROJECTS</Link>
-          <Link to="/resume" className={styles.secondaryBtn}>TUTORING RESUME</Link>
-        </div>
-      </section>
-      
-      <div className={styles.decorativeLine}></div>
+      </div>
     </div>
   );
 };

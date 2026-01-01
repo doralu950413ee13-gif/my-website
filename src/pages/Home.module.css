@@ -1,94 +1,175 @@
 .wrapper {
   min-height: 100vh;
-  background-color: #f5f1ea; /* 與 Navbar 一致的米色 */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 20px 0;
-  text-align: center;
+  background-color: #f5f1ea;
+  padding: 160px 8% 80px;
+  display: block; /* 確保 wrapper 本身不影響內部 grid */
 }
 
-.hero {
-  max-width: 800px;
-  animation: fadeIn 1.2s ease-out;
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.greeting {
+.heroHeader {
+  margin-bottom: 80px;
+  text-align: left; /* 確保標題靠左 */
+}
+
+.label {
   display: block;
-  font-size: 0.75rem;
-  letter-spacing: 4px;
+  font-size: 0.8rem;
+  letter-spacing: 5px;
   color: #b08d57;
-  margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
 
 .mainTitle {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
-  line-height: 1.1;
+  font-size: clamp(3.5rem, 8vw, 6rem);
   color: #1a1a1a;
-  margin-bottom: 30px;
-  font-weight: 400;
+  line-height: 0.9;
+  margin: 0;
 }
 
-.italicText {
+.subtitle {
+  display: block;
+  font-family: 'Playfair Display', serif;
   font-style: italic;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   color: #8c857b;
+  margin-top: 15px;
 }
 
-.description {
-  color: #666;
+/* 核心：分欄引擎 */
+.contentGrid {
+  display: grid;
+  /* 強制分欄比例，並設定寬度 */
+  grid-template-cols: 1.4fr 1fr; 
+  gap: 60px;
+  align-items: start;
+  border-top: 1px solid #e0dcd5;
+  padding-top: 60px;
+  width: 100%;
+}
+
+.leftCol, .rightCol {
+  width: 100%;
+  text-align: left;
+}
+
+/* 左側文字細節 */
+.quote {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
+.text {
+  font-size: 1.3rem; /* 👈 放大字體 */
   line-height: 1.8;
-  font-size: 1.05rem;
-  margin-bottom: 50px;
+  color: #444;
+  margin-bottom: 25px;
+  text-align: justify; /* 兩端對齊會更有雜誌感 */
 }
 
-.ctaArea {
+/* 右側卡片設計 */
+.statsCard {
+  background-color: #fff;
+  padding: 40px;
+  border: 1px solid #e0dcd5;
+  /* 讓卡片更突出 */
+  box-shadow: 12px 12px 0px #b08d57;
+  transition: transform 0.3s ease;
+}
+
+.cardTitle {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: #b08d57;
+  margin-bottom: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.statItem {
+  margin-bottom: 25px;
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  color: #9c9285;
+  margin-bottom: 4px;
+}
+
+.statValue {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.statSub {
+  font-size: 0.85rem;
+  color: #8c857b;
+  margin-top: 2px;
+}
+
+/* 按鈕群組 */
+.actions {
   display: flex;
-  gap: 20px;
-  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
 }
 
-.primaryBtn {
-  padding: 15px 35px;
-  background-color: #1a1a1a;
-  color: white;
+.primaryBtn, .secondaryBtn {
+  display: inline-block;
+  padding: 18px 30px;
   text-decoration: none;
   font-size: 0.8rem;
   letter-spacing: 2px;
+  font-weight: 600;
   transition: all 0.3s ease;
+}
+
+.primaryBtn {
+  background-color: #1a1a1a;
+  color: #fff;
 }
 
 .primaryBtn:hover {
   background-color: #b08d57;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .secondaryBtn {
-  padding: 15px 35px;
   border: 1px solid #1a1a1a;
   color: #1a1a1a;
-  text-decoration: none;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  transition: all 0.3s ease;
 }
 
 .secondaryBtn:hover {
   border-color: #b08d57;
   color: #b08d57;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
-.decorativeLine {
-  margin-top: 80px;
-  width: 1px;
-  height: 100px;
-  background-color: #b08d57;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* 響應式：平板與手機改為單欄 */
+@media (max-width: 1024px) {
+  .contentGrid {
+    grid-template-cols: 1fr;
+    gap: 50px;
+  }
+  .statsCard {
+    box-shadow: none;
+    padding: 30px;
+  }
+  .quote {
+    font-size: 1.8rem;
+  }
 }
