@@ -1,0 +1,65 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #f5f1ea; /* 經典米色背景 */
+  border-bottom: 1px solid #e0dcd5;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: serif;
+  font-size: 1.5rem;
+  color: #b08d57; /* 淺金褐色 */
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #8c857b; /* 灰褐色文字 */
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #b08d57;
+}
+
+/* 仿照圖中的 Active 下劃線樣式 */
+.active {
+  color: #b08d57;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #b08d57;
+}
