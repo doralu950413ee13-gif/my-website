@@ -2,6 +2,7 @@
   min-height: 100vh;
   background-color: #f5f1ea;
   padding: 140px 10% 80px;
+  overflow: clip; 
 }
 
 .header {
@@ -25,134 +26,190 @@
 }
 
 .container {
-  display: grid;
-  grid-template-cols: 300px 1fr;
+  display: flex;
   gap: 80px;
-  align-items: start;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* 側邊欄樣式 */
 .sidebar {
+  width: 320px; /* 稍微加寬以容納較大字體 */
+  flex-shrink: 0;
   position: sticky;
-  top: 140px;
+  top: 100px;
+  z-index: 10;
 }
 
 .profileBox {
   border: 1px solid #b08d57;
   padding: 30px;
   margin-bottom: 40px;
+  background-color: #f5f1ea;
 }
 
 .name {
   font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
+  font-size: 2.2rem; /* 姓名加大 */
   margin-bottom: 10px;
 }
 
 .university {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #b08d57;
   font-weight: 600;
   margin-bottom: 20px;
+  line-height: 1.4;
 }
 
 .contact {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #666;
   line-height: 1.8;
 }
 
-.expertise h4 {
-  font-size: 0.75rem;
+.expertise h4, .rates h4 {
+  font-size: 1.1rem; /* 側邊欄小標題加大 */
   letter-spacing: 2px;
   color: #1a1a1a;
   margin-bottom: 20px;
   border-bottom: 1px solid #e0dcd5;
   padding-bottom: 10px;
+  font-weight: 700;
 }
 
 .expertise ul {
   list-style: none;
   padding: 0;
-  font-size: 0.9rem;
-  color: #666;
-  line-height: 2.2;
+  margin-bottom: 30px;
 }
 
-/* 主內容區樣式 */
+.expertise li {
+  font-size: 1.15rem; /* 核心成就文字顯著加大 */
+  color: #333;
+  line-height: 2; /* 增加行距 */
+  font-weight: 500;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.expertise li::before {
+  content: "•";
+  color: #b08d57;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.rates p {
+  font-size: 1.2rem; /* 待遇數字加大 */
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.rates small {
+  display: block;
+  margin-top: 10px;
+  color: #b08d57;
+  font-style: italic;
+  font-size: 1rem; /* 備註加大 */
+}
+
+/* 主內容區 */
+.mainContent {
+  flex-grow: 1;
+  min-width: 0;
+}
+
 .section {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .sectionTitle {
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  margin-bottom: 30px;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
   color: #1a1a1a;
 }
 
 .text {
   line-height: 1.8;
   color: #444;
-  font-size: 1.05rem;
-}
-
-.experienceItem {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.year {
-  font-family: monospace;
-  font-size: 0.85rem;
-  color: #b08d57;
-  min-width: 100px;
-}
-
-.expDetail h4 {
-  margin-bottom: 10px;
   font-size: 1.1rem;
 }
 
-.expDetail p {
-  font-size: 0.95rem;
-  color: #666;
-  line-height: 1.6;
+.expGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.expItem {
+  background: white;
+  padding: 30px;
+  border-left: 4px solid #b08d57;
+  border: 1px solid #e0dcd5;
+}
+
+.expItem h4 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  color: #1a1a1a;
+}
+
+.expItem ul {
+  list-style: circle;
+  padding-left: 25px;
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #b08d57;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .featureGrid {
   display: grid;
   grid-template-cols: 1fr 1fr;
-  gap: 30px;
+  gap: 25px;
 }
 
 .feature {
   background: white;
-  padding: 25px;
-  border: 1px solid #eee;
+  padding: 30px;
+  border: 1px solid #e0dcd5;
 }
 
 .feature strong {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: #b08d57;
+  font-size: 1.25rem;
 }
 
 .feature p {
-  font-size: 0.9rem;
-  color: #777;
-  line-height: 1.5;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #555;
 }
 
-/* 響應式調整 */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .container {
-    grid-template-cols: 1fr;
+    flex-direction: column;
+    gap: 40px;
   }
   .sidebar {
+    width: 100%;
     position: static;
+  }
+  .featureGrid {
+    grid-template-cols: 1fr;
   }
 }

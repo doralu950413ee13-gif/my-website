@@ -1,9 +1,60 @@
-.article { padding: 150px 10%; max-width: 800px; margin: auto; }
-.mainTitle { font-family: serif; font-size: 3.5rem; line-height: 1.1; margin-bottom: 50px; }
+/* src/pages/PostDetail.module.css */
+.wrapper {
+  min-height: 100vh;
+  background-color: #f5f1ea;
+  padding: 140px 10% 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.articleCard {
+  background: white;
+  padding: 60px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid #e0dcd5;
+}
+
+/* 讓 Markdown 內容恢復美感的關鍵 */
 .markdownContent {
-  font-size: 1.15rem;
   line-height: 1.8;
   color: #333;
+  font-family: 'Inter', sans-serif;
 }
-/* 針對 Markdown 內標題的微調 */
-.markdownContent h2 { font-family: serif; margin-top: 40px; font-size: 2rem; }
+
+/* 針對標題 */
+.markdownContent h1, 
+.markdownContent h2, 
+.markdownContent h3 {
+  font-family: 'Playfair Display', serif;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #1a1a1a;
+}
+
+.markdownContent h1 { font-size: 2.5rem; border-bottom: 2px solid #b08d57; padding-bottom: 10px; }
+.markdownContent h2 { font-size: 1.8rem; }
+
+/* 針對段落 */
+.markdownContent p {
+  margin-bottom: 1.2em;
+}
+
+/* 針對列表 (解決你截圖中清單黏在一起的問題) */
+.markdownContent ul, 
+.markdownContent ol {
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+}
+
+.markdownContent li {
+  margin-bottom: 0.5em;
+  list-style: disc; /* 強制顯示圓點 */
+}
+
+/* 針對粗體 */
+.markdownContent strong {
+  color: #b08d57;
+  font-weight: 600;
+}

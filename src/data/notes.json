@@ -1,18 +1,10 @@
 [
   {
-    "id": 1,
-    "title": "在電機系的那些日子",
-    "date": "DEC 24, 2025",
-    "markdownId": "ee-life",
-    "image": "/images/note1.jpg", 
-    "preview": "從電路板到程式碼，這裡記錄了我對工程與美感的追求..."
-  },
-  {
-    "id": 2,
-    "title": "冬日裡的家教感悟",
-    "date": "NOV 15, 2025",
-    "markdownId": "tutor-blog",
-    "image": "/images/note2.jpg",
-    "preview": "看著學生從困惑到眼神發亮的瞬間，是我教課最大的動力..."
+    "id": "uniform-day",
+    "title": "辦青椒第一屆北一制服日！！",
+    "date": "DEC 2025",
+    "markdownId": "uniform-day",
+    "image": "/my-website/public/images/uniform-day.jpg",
+    "preview": "大一說為啥交大沒有北一制服日？於是我決定自己辦一個！"
   }
 ]

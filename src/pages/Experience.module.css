@@ -1,104 +1,143 @@
 .wrapper {
   min-height: 100vh;
   background-color: #f5f1ea;
-  padding: 140px 10% 80px;
+  padding: 140px 10% 100px;
 }
 
 .header {
-  margin-bottom: 80px;
-  border-bottom: 1px solid #e0dcd5;
-  padding-bottom: 20px;
+  margin-bottom: 100px;
+  text-align: center;
 }
 
 .label {
-  font-size: 0.7rem;
-  letter-spacing: 3px;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
   color: #b08d57;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #1a1a1a;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .timeline {
   max-width: 900px;
   margin: 0 auto;
-  position: relative;
 }
 
 .timelineItem {
-  display: grid;
-  grid-template-cols: 200px 1fr;
-  gap: 60px;
-  margin-bottom: 80px;
-}
-
-.timeSection {
-  text-align: right;
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  margin-bottom: 60px;
 }
 
-.period {
-  font-family: monospace;
-  font-size: 0.9rem;
-  font-weight: bold;
+/* 左側年份樣式 */
+.timeSide {
+  width: 150px;
+  text-align: right;
+  padding-right: 40px;
+  flex-shrink: 0;
+}
+
+.year {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: #1a1a1a;
-  letter-spacing: 1px;
 }
 
-.location {
-  font-size: 0.75rem;
-  color: #b08d57;
+.city {
+  display: block;
+  font-size: 0.7rem;
   letter-spacing: 2px;
+  color: #b08d57;
+  margin-top: 5px;
 }
 
-.contentSection {
+/* 右側內容樣式 */
+.contentSide {
   position: relative;
   padding-left: 40px;
-  border-left: 1px solid #e0dcd5; /* 時間軸的那條垂直線 */
+  padding-bottom: 40px;
+  border-left: 1px solid #e0dcd5; /* 垂直時間線 */
 }
 
-/* 時間軸上的圓點 */
 .dot {
   position: absolute;
-  left: -5.5px; /* 讓圓點剛好卡在線上 (線寬 1px + 圓點半徑) */
-  top: 5px;
+  left: -5.5px;
+  top: 8px;
   width: 10px;
   height: 10px;
   background-color: #b08d57;
   border-radius: 50%;
+  box-shadow: 0 0 0 4px #f5f1ea; /* 讓點點跟線分離，更有設計感 */
 }
 
 .itemTitle {
   font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #1a1a1a;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  line-height: 1.3;
 }
 
 .description {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #666;
   line-height: 1.8;
   max-width: 600px;
 }
 
-/* 響應式：手機版將左右結構改為上下 */
+/* 底部額外項目的美化 */
+.extraSection {
+  margin-top: 60px;
+  padding-top: 60px;
+  border-top: 1px solid #e0dcd5;
+  text-align: center;
+}
+
+.extraLabel {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: #b08d57;
+  margin-bottom: 30px;
+}
+
+.extraGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.extraGrid span {
+  font-size: 0.9rem;
+  color: #8c857b;
+  background: white;
+  padding: 8px 16px;
+  border: 1px solid #e0dcd5;
+  transition: all 0.3s ease;
+}
+
+.extraGrid span:hover {
+  border-color: #b08d57;
+  color: #b08d57;
+}
+
+/* 手機版適應 */
 @media (max-width: 768px) {
   .timelineItem {
-    grid-template-cols: 1fr;
-    gap: 20px;
+    flex-direction: column;
   }
-  .timeSection {
+  .timeSide {
+    width: 100%;
     text-align: left;
+    margin-bottom: 20px;
   }
-  .contentSection {
-    padding-bottom: 40px;
+  .contentSide {
+    padding-left: 25px;
   }
 }

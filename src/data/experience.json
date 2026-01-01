@@ -1,23 +1,66 @@
 [
-  {
+    {
     "id": 1,
-    "period": "2024 - PRESENT",
-    "title": "國立臺灣大學 電機工程學系",
-    "description": "深入研究電路系統、訊號處理與網頁開發技術。參與多項校內專案與學術研究。",
-    "location": "TAIPEI"
+    "period": "2025",
+    "title": "清交北一新竹校友會 創會會長",
+    "description": "創立並連結清華、陽明交大兩校之北一女校友資源，規劃跨校交流活動與社群經營。",
+    "location": "TAIPEI / HSINCHU"
+  },
+ {
+    "id": 8,
+    "period": "2025",
+    "title": "Xplore 設計你的人生課程 引導員",
+    "description": "運用奧德賽計畫、Way Finding Map等工具，引導學員透過原型設計與發散思考，探索生涯規劃的多樣可能，具備優秀的共感傾聽與團隊引導能力。",
+    "location": "HSINCHU"
   },
   {
     "id": 2,
-    "period": "2023 SUMMER",
-    "title": "電機營 Xplore 總召 / 網頁組長",
-    "description": "負責營隊整體規劃與官方網站開發，帶領 50 人團隊完成為期一週的營隊活動。",
-    "location": "TAIPEI"
+    "period": "2025",
+    "title": "NYCU OpenHouse 副召",
+    "description": "擔任校級企業徵才活動副總召集人，協調多方部門與學校、企業對接，優化活動流程。",
+    "location": "HSINCHU"
   },
   {
     "id": 3,
-    "period": "2021 - 2023",
-    "title": "台北市立第一女子高級中學",
-    "description": "高中時期參與機器人社團，開啟了對硬體開發與程式設計的熱忱。",
+    "period": "2025",
+    "title": "吳健雄科學營 輔導員",
+    "description": "於全球指標性科學營隊擔任引導者，協助頂尖高中學子探索科學領域並建立團隊連結。",
+    "location": "NATIONAL"
+  },
+  {
+    "id": 4,
+    "period": "2024",
+    "title": "NYCU 抓馬盃 冠軍 & 最佳女主角",
+    "description": "勇於跨領域挑戰自我，在極短時間內掌握表演精髓，憑藉卓越的舞台影響力與團隊協作，榮獲團體獎冠軍及個人最高榮譽最佳女主角，展現極強的學習爆發力。",
+    "location": "HSINCHU"
+  },
+  {
+    "id": 9,
+    "period": "2023",
+    "title": "北一女中 第二屆梗盃 總召",
+    "description": "統籌大型校園活動，從零到一建立組織架構。這份經歷開啟了我對籌辦活動的熱情，更奠定了我想透過服務與引導來「幫助他人」的初衷，是領導力與利他精神的啟蒙點。",
+    "location": "TAIPEI"
+  },
+  {
+    "id": 5,
+    "period": "2023",
+    "title": "第22屆 全國高中數學建模競賽 金牌",
+    "description": "運用數學建模解決複雜問題，於全國高中職頂尖參賽隊伍中脫穎而出奪得金牌。",
+    "location": "NATIONAL"
+  },
+  {
+    "id": 6,
+    "period": "2022",
+    "title": "全國火星任務競賽 科展組 第一名",
+    "description": "針對跨學科科學專題進行深入研究與實驗驗證，榮獲全國科展組團體冠軍。",
+    "location": "NATIONAL"
+  },
+  {
+    "id": 7,
+    "period": "2021",
+    "title": "北一女中 瑜珈社 社長",
+    "description": "帶領社團運行，具備組織領導與跨單位溝通之豐富經驗。",
     "location": "TAIPEI"
   }
+  
 ]
