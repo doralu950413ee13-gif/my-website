@@ -11,7 +11,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1600px;
   width: 100%;
   margin: 0 auto;
   padding: 0 40px;
@@ -27,6 +27,7 @@
   text-decoration: none;
   letter-spacing: 2px;
   font-weight: 400;
+  margin-left: -5px;
 }
 
 .menu {

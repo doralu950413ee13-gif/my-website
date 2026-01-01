@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Experience.module.css';
 import expData from '../data/experience.json';
 
@@ -24,7 +25,18 @@ const Experience = () => {
               <div className={styles.lineIndicator}>
                 <div className={styles.dot}></div>
               </div>
-              <h3 className={styles.itemTitle}>{item.title}</h3>
+              
+              {/* 判斷是否有對應的札記 ID，有的話則渲染 Link */}
+              {item.noteId ? (
+                <Link to={`/notes/${item.noteId}`} className={styles.linkTitle}>
+                  <h3 className={styles.itemTitle}>
+                    {item.title} <span className={styles.arrow}>→</span>
+                  </h3>
+                </Link>
+              ) : (
+                <h3 className={styles.itemTitle}>{item.title}</h3>
+              )}
+              
               <p className={styles.description}>{item.description}</p>
             </div>
           </div>
