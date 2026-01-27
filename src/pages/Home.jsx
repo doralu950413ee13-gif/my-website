@@ -37,7 +37,7 @@ const Home = () => {
 
             <div className={styles.actions}>
               <Link to="/experience" className={styles.primaryBtn}>JOURNEY OF GROWTH</Link>
-              <Link to="/resume" className={styles.secondaryBtn}>TUTORING MISSION</Link>
+              {/*<Link to="/resume" className={styles.secondaryBtn}>TUTORING MISSION</Link>*/}
             </div>
           </div>
 

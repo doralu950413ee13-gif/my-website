@@ -8,7 +8,7 @@ const Navbar = () => {
     { name: 'EXPERIENCE', path: '/experience' },
     { name: 'PROJECTS', path: '/projects' },
     { name: 'NOTES', path: '/notes' },
-    { name: 'RESUME', path: '/resume' },
+    { /*name: 'RESUME', path: '/resume' */},
   ];
 
   return (
