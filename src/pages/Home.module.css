@@ -157,11 +157,71 @@
   transform: translateY(-2px);
 }
 
-/* 響應式：平板與手機改為單欄 */
-/* 確保大螢幕下不會擠在一起 */
+/* --- 📱 手機與平板 RWD 開始 --- */
+
+/* 針對平板以下 (1024px) */
 @media (max-width: 1024px) {
+  .wrapper {
+    padding: 120px 6% 60px; /* 減少上方間距 */
+  }
+
+  .mainTitle {
+    font-size: clamp(3rem, 15vw, 4.5rem); /* 縮小大標題 */
+  }
+
+  .subtitle {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
   .contentGrid {
-    grid-template-cols: 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr; /* 👈 強制改為單欄 */
+    gap: 50px;
+    padding-top: 40px;
+  }
+
+  .quote {
+    font-size: 1.8rem; /* 縮小引言 */
+    margin-bottom: 30px;
+  }
+
+  .statsCard {
+    box-shadow: 8px 8px 0px #b08d57; /* 陰影縮小一點 */
+    padding: 30px;
+  }
+}
+
+/* 針對手機 (480px) */
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 100px 5% 40px;
+  }
+
+  .mainTitle {
+    font-size: 2.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+  }
+
+  .text {
+    font-size: 1.1rem; /* 讓手機閱讀更舒適 */
+    line-height: 1.6;
+  }
+
+  .actions {
+    flex-direction: column; /* 👈 按鈕在手機上垂直堆疊 */
+    gap: 15px;
+  }
+
+  .primaryBtn, .secondaryBtn {
+    width: 100%; /* 按鈕寬度撐滿 */
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .statsCard {
+    padding: 20px;
+    box-shadow: 5px 5px 0px #b08d57;
   }
 }
